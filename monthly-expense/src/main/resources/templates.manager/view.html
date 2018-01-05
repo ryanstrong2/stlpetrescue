@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments::head"></head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<body class="container" style="margin-top:110px">
+<h1 th:text="${title}">Monthly Allocation</h1>
+<nav th:replace="fragments:: header"></nav>
+<p th:each="manager: *{managers}"
+   th:text="${manager.allocation}"/>
+<ul >
+    <li th:text="${allocation}">number</li>
+</ul>
+<nav th:replace="fragments:: userViewNav"></nav>
+</body>
+</html>

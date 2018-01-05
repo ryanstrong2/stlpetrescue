@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments::head"></head>
+<nav th:replace="fragments::date"></nav>
+<body class="container" style="max-width:400px; margin:50px; margin-top: 00px;">
+
+<nav th:replace="fragments:: header"></nav>
+<ul >
+    <li th:each="manager : ${managers}">
+        <a th:href="'/manager/view/' + ${manager.id}" th:text="${manager.name}"></a>
+    </li>
+</ul>
+<nav th:replace="fragments:: userNav"></nav>
+
+
+</body>
+</html>
